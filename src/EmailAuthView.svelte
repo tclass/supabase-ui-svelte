@@ -22,7 +22,7 @@
 
       if (signUpError) error = signUpError.message
     } else if (view == 'sign_in') {
-      const { error: signInError } = await supabaseClient.auth.signIn({
+      const { error: signInError } = await supabaseClient.auth.signInWithPassword({
         email, password
       })
 
